@@ -27,3 +27,5 @@ module.exports = {
   }
 }
 ```
+
+### koa-webpack-hot-middleware
