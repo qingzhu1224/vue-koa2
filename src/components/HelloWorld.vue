@@ -2,8 +2,8 @@
   <div class="hello">
     <h1>音乐排行榜</h1>
     <ul>
-      <li v-for="(item, index) in list" :key="index">
-        <p>{{item.comment}}</p>
+      <li v-for="item in list" :key="item.id">
+        <p>{{item.name}}</p>
       </li>
     </ul>
   </div>
@@ -27,13 +27,13 @@ export default {
     getList () {
       this.$axios({
         method: "get",
-        url: "https://api.apiopen.top/musicRankings", // 接口地址
+        url: "/serve/music", // 接口地址
         data: {
           keyword: "1"   // 传接口参数
         }
       })
         .then(response => {
-          this.list = response.data.result
+          this.list = response.data.list
         })
         .catch(error => 
           console.log(error, "error")

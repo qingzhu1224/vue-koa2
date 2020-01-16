@@ -1,16 +1,4 @@
-# vue-koa2
-
-### 第一步  vue create vue-koa2
-
-### 第二步  安装axios
-
-
-### proxy代理到开放接口， 访问不了
-
-### 创建一个新文件serve, 安装koa2
-
-### 代理问题
-```
+// vue.config.js
 module.exports = {
   devServer: {
     proxy: {
@@ -26,4 +14,3 @@ module.exports = {
     }
   }
 }
-```
